@@ -1,3 +1,5 @@
+import 'package:classico/home_page.dart';
+import 'package:classico/practice.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,13 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("Welcome"),
-          ),
-        ),
-      ),
+      theme: ThemeData(
+          brightness: Brightness.light, primaryColor: Colors.blueGrey),
+      debugShowCheckedModeBanner: false,
+      //home: HomePage(),
+      home: practice(),
     );
   }
 }
